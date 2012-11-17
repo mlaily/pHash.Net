@@ -1,3 +1,7 @@
 relre:.suo$
+relre:.sdf$
 relre:.*?/obj/
 relre:.*?/bin/
+relre:.*?/Debug/
+relre:.*?/Release/
+relre:TestResults/

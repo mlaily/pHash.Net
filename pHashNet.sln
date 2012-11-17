@@ -10,8 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pHashNet", "pHashNet\pHashN
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{86200DD3-14D1-4479-8F6A-9F302C642FCD}"
 	ProjectSection(SolutionItems) = preProject
-		ConsoleApplication1.vsmdi = ConsoleApplication1.vsmdi
 		Local.testsettings = Local.testsettings
+		pHashNet.vsmdi = pHashNet.vsmdi
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
@@ -21,7 +21,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pHash", "pHash\pHash.vcxpro
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = ConsoleApplication1.vsmdi
+		CategoryFile = pHashNet.vsmdi
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
