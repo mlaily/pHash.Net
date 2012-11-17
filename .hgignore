@@ -1,5 +1,6 @@
 relre:.suo$
-relre:.sdf$
+relre:.*.sdf$
+relre:.*.ipch$
 relre:.*?/obj/
 relre:.*?/bin/
 relre:.*?/Debug/
