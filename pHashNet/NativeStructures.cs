@@ -28,6 +28,23 @@ namespace ConsoleApplication1
 			/// the size of the coeff array.
 			/// </summary>
 			public int size;
+
+			private byte[] _Coeffs;
+			public byte[] Coeffs
+			{
+				get
+				{
+					if (_Coeffs == null)
+					{
+						_Coeffs = new byte[size];
+						for (int i = 0; i < size; i++)
+						{
+							Coeffs[i] = Marshal.ReadByte(coeffs, i);
+						}
+					}
+					return _Coeffs;
+				}
+			}
 		}
 
 		[StructLayout(LayoutKind.Sequential)]
