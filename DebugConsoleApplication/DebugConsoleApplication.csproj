@@ -54,7 +54,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y "$(SolutionDir)pHash\$(ConfigurationName)\pHash.dll" "$(TargetDir)"
+    <PostBuildEvent>xcopy /Y "$(SolutionDir)pHash\Release\pHash.dll" "$(TargetDir)"
 xcopy /Y "$(SolutionDir)extern_dep\*" "$(TargetDir)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
