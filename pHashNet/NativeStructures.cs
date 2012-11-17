@@ -38,7 +38,7 @@ namespace ConsoleApplication1
 			/// off_t index;
 			/// pos of hash in orig file.
 			/// </summary>
-			public long index;
+			public int index;
 		}
 
 		[StructLayout(LayoutKind.Sequential)]

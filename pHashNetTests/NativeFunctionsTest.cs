@@ -208,10 +208,18 @@ namespace pHashNetTests
 		[TestMethod()]
 		public void ph_texthashTest()
 		{
-			string filename = file1;
+			string filename = file3;
 			int nbpoints = 42;
 			IntPtr actual;
 			actual = NativeFunctions.ph_texthash(filename, out nbpoints);
+
+			NativeStructures.TxtHashPoint[] array = new NativeStructures.TxtHashPoint[nbpoints];
+			for (int i = 0; i < array.Length; i++)
+			{
+				array[i] = (NativeStructures.TxtHashPoint)Marshal.PtrToStructure(actual, typeof(NativeStructures.TxtHashPoint));
+				actual = IntPtr.Add(actual, Marshal.SizeOf(typeof(NativeStructures.TxtHashPoint)));
+			}
+
 			Assert.AreNotEqual(42, nbpoints);
 		}
 
@@ -234,12 +242,8 @@ namespace pHashNetTests
 			NativeStructures.TxtMatch[] array = new NativeStructures.TxtMatch[nbmatches];
 			for (int i = 0; i < array.Length; i++)
 			{
-				var x1 = Marshal.ReadInt32(actual);
-				var x2 = Marshal.ReadInt32(actual, sizeof(int));
-				var x3 = (uint)Marshal.ReadInt64(actual, sizeof(int) * 2);
-				array[i] = new NativeStructures.TxtMatch() { first_index = x1, second_index = x2, length = x3 };
-				//(NativeStructures.TxtMatch)Marshal.PtrToStructure(actual, typeof(NativeStructures.TxtMatch));
-				actual = IntPtr.Add(actual, 12); //! hardcoded !
+				array[i] = (NativeStructures.TxtMatch)Marshal.PtrToStructure(actual, typeof(NativeStructures.TxtMatch));
+				actual = IntPtr.Add(actual, Marshal.SizeOf(typeof(NativeStructures.TxtMatch)));
 			}
 
 			Assert.AreNotEqual(42, nbmatches);
