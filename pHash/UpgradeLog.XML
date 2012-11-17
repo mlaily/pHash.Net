@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="pHash">
+</Property><Property Name="Solution File" Value="D:\Downloads\winpHash-0.9.4\pHash-0.9.4\pHash.sln">
+</Property><Property Name="Date" Value="jeudi 15 novembre 2012">
+</Property><Property Name="Time" Value="17:01">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="pHash.sln" Description="File successfully backed up as D:\Downloads\winpHash-0.9.4\pHash-0.9.4\pHash.sln.old">
+</Event><Event ErrorLevel="0" Project="pHash" Source="pHash.vcproj" Description="Converting project file 'D:\Downloads\winpHash-0.9.4\pHash-0.9.4\pHash.vcproj'.">
+</Event><Event ErrorLevel="1" Project="pHash" Source="pHash.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="pHash" Source="pHash.vcproj" Description="Done converting to new project file 'D:\Downloads\winpHash-0.9.4\pHash-0.9.4\pHash.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="pHash" Source="pHash.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="pHash.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="pHash.sln" Description="Converted">
+</Event></UpgradeLog>

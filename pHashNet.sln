@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugConsoleApplication", "DebugConsoleApplication\DebugConsoleApplication.csproj", "{9A0AC6F6-49F8-4A67-8FC5-08190C3EC7F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pHashNet", "pHashNet\pHashNet.csproj", "{663A39AE-CA7B-4DDC-BF22-39D5F6019984}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1A4E5682-AA5E-41E6-9C0D-CC85D3A3D547} = {1A4E5682-AA5E-41E6-9C0D-CC85D3A3D547}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{86200DD3-14D1-4479-8F6A-9F302C642FCD}"
+	ProjectSection(SolutionItems) = preProject
+		ConsoleApplication1.vsmdi = ConsoleApplication1.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pHashNetTests", "pHashNetTests\pHashNetTests.csproj", "{085A36E3-ABFF-425A-9929-0231E2723A31}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pHash", "pHash\pHash.vcxproj", "{1A4E5682-AA5E-41E6-9C0D-CC85D3A3D547}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = ConsoleApplication1.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A0AC6F6-49F8-4A67-8FC5-08190C3EC7F7}.Debug|x86.ActiveCfg = Debug|x86
+		{9A0AC6F6-49F8-4A67-8FC5-08190C3EC7F7}.Debug|x86.Build.0 = Debug|x86
+		{9A0AC6F6-49F8-4A67-8FC5-08190C3EC7F7}.Release|x86.ActiveCfg = Release|x86
+		{9A0AC6F6-49F8-4A67-8FC5-08190C3EC7F7}.Release|x86.Build.0 = Release|x86
+		{663A39AE-CA7B-4DDC-BF22-39D5F6019984}.Debug|x86.ActiveCfg = Debug|x86
+		{663A39AE-CA7B-4DDC-BF22-39D5F6019984}.Debug|x86.Build.0 = Debug|x86
+		{663A39AE-CA7B-4DDC-BF22-39D5F6019984}.Release|x86.ActiveCfg = Release|x86
+		{663A39AE-CA7B-4DDC-BF22-39D5F6019984}.Release|x86.Build.0 = Release|x86
+		{085A36E3-ABFF-425A-9929-0231E2723A31}.Debug|x86.ActiveCfg = Debug|x86
+		{085A36E3-ABFF-425A-9929-0231E2723A31}.Debug|x86.Build.0 = Debug|x86
+		{085A36E3-ABFF-425A-9929-0231E2723A31}.Release|x86.ActiveCfg = Release|x86
+		{085A36E3-ABFF-425A-9929-0231E2723A31}.Release|x86.Build.0 = Release|x86
+		{1A4E5682-AA5E-41E6-9C0D-CC85D3A3D547}.Debug|x86.ActiveCfg = Debug|Win32
+		{1A4E5682-AA5E-41E6-9C0D-CC85D3A3D547}.Debug|x86.Build.0 = Debug|Win32
+		{1A4E5682-AA5E-41E6-9C0D-CC85D3A3D547}.Release|x86.ActiveCfg = Release|Win32
+		{1A4E5682-AA5E-41E6-9C0D-CC85D3A3D547}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
