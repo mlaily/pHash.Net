@@ -1,4 +1,20 @@
-﻿using ConsoleApplication1;
+﻿//Copyright 2012 Melvyn Laily
+//http://arcanesanctum.net
+
+//This program is free software: you can redistribute it and/or modify
+//it under the terms of the GNU General Public License as published by
+//the Free Software Foundation, either version 3 of the License, or
+//(at your option) any later version.
+
+//This program is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+
+//You should have received a copy of the GNU General Public License
+//along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+using pHash.Net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Runtime.InteropServices;
@@ -15,26 +31,7 @@ namespace pHashNetTests
 	public class NativeFunctionsTest
 	{
 
-		[TestMethod]
-		public void Initialization()
-		{
-			if (!System.IO.File.Exists(file1))
-			{
-				Assert.Fail(file1);
-			}
-			if (!System.IO.File.Exists(file2))
-			{
-				Assert.Fail(file2);
-			}
-			if (!System.IO.File.Exists(file3))
-			{
-				Assert.Fail(file3);
-			}
-			if (!System.IO.File.Exists(file4))
-			{
-				Assert.Fail(file4);
-			}
-		}
+	
 
 		private TestContext testContextInstance;
 
@@ -84,12 +81,7 @@ namespace pHashNetTests
 		//
 		#endregion
 
-		private static readonly string dir = @"D:\Mes Documents\CodeSource\HG\pHashNet\pHashNetTests\";
-		private static readonly string file1 = dir + "1.jpg";
-		private static readonly string file2 = dir + "2.jpg";
-
-		private static readonly string file3 = dir + "3.txt";
-		private static readonly string file4 = dir + "4.txt";
+		
 
 		/// <summary>
 		///A test for ph_about
@@ -108,7 +100,7 @@ namespace pHashNetTests
 		[TestMethod()]
 		public void ph_dct_imagehashTest()
 		{
-			string file = file1;
+			string file = CommonTest.file1;
 			ulong hash = 42;
 			int actual;
 			actual = NativeFunctions.ph_dct_imagehash(file, out hash);
@@ -123,9 +115,9 @@ namespace pHashNetTests
 		public void ph_hamming_distanceTest()
 		{
 			ulong hash1;
-			NativeFunctions.ph_dct_imagehash(file1, out hash1);
+			NativeFunctions.ph_dct_imagehash(CommonTest.file1, out hash1);
 			ulong hash2 = 0;
-			NativeFunctions.ph_dct_imagehash(file2, out hash2);
+			NativeFunctions.ph_dct_imagehash(CommonTest.file2, out hash2);
 			int actual;
 			actual = NativeFunctions.ph_hamming_distance(hash1, hash2);
 			Assert.AreNotEqual(0, actual);
@@ -137,7 +129,7 @@ namespace pHashNetTests
 		[TestMethod()]
 		public void ph_image_digestTest()
 		{
-			string file = file1;
+			string file = CommonTest.file1;
 			NativeStructures.Digest digest;
 			int expected = 0;
 			int actual;
@@ -152,9 +144,9 @@ namespace pHashNetTests
 		public void ph_crosscorrTest()
 		{
 			NativeStructures.Digest x;
-			NativeFunctions.ph_image_digest(file1, 1.0f, 1.0f, out x);
+			NativeFunctions.ph_image_digest(CommonTest.file1, 1.0f, 1.0f, out x);
 			NativeStructures.Digest y;
-			NativeFunctions.ph_image_digest(file2, 1.0f, 1.0f, out y);
+			NativeFunctions.ph_image_digest(CommonTest.file2, 1.0f, 1.0f, out y);
 			double pcc = 42;
 			int actual;
 			actual = NativeFunctions.ph_crosscorr(ref x, ref y, out pcc);
@@ -168,7 +160,7 @@ namespace pHashNetTests
 		[TestMethod()]
 		public void ph_mh_imagehashTest()
 		{
-			string filename = file1;
+			string filename = CommonTest.file1;
 			int N = 0;
 			IntPtr actual;
 			actual = NativeFunctions.ph_mh_imagehash(filename, out N);
@@ -182,7 +174,7 @@ namespace pHashNetTests
 		{
 			double pcc = 42;
 			int actual;
-			actual = NativeFunctions.ph_compare_images(file1, file2, out pcc);
+			actual = NativeFunctions.ph_compare_images(CommonTest.file1, CommonTest.file2, out pcc);
 			Assert.AreNotEqual(42, pcc);
 			Assert.AreEqual(0, actual);
 		}
@@ -194,9 +186,9 @@ namespace pHashNetTests
 		public void ph_hammingdistance2Test()
 		{
 			int lenA = 0;
-			IntPtr hashA = NativeFunctions.ph_mh_imagehash(file1, out lenA);
+			IntPtr hashA = NativeFunctions.ph_mh_imagehash(CommonTest.file1, out lenA);
 			int lenB = 0;
-			IntPtr hashB = NativeFunctions.ph_mh_imagehash(file2, out lenB);
+			IntPtr hashB = NativeFunctions.ph_mh_imagehash(CommonTest.file2, out lenB);
 			double actual;
 			actual = NativeFunctions.ph_hammingdistance2(hashA, lenA, hashB, lenB);
 			Assert.AreNotEqual(0, actual);
@@ -208,7 +200,7 @@ namespace pHashNetTests
 		[TestMethod()]
 		public void ph_texthashTest()
 		{
-			string filename = file3;
+			string filename = CommonTest.file3;
 			int nbpoints = 42;
 			IntPtr actual;
 			actual = NativeFunctions.ph_texthash(filename, out nbpoints);
@@ -231,9 +223,9 @@ namespace pHashNetTests
 		{
 
 			int N1 = 0;
-			IntPtr hash1 = NativeFunctions.ph_texthash(file3, out N1);
+			IntPtr hash1 = NativeFunctions.ph_texthash(CommonTest.file3, out N1);
 			int N2 = 0;
-			IntPtr hash2 = NativeFunctions.ph_texthash(file4, out N2);
+			IntPtr hash2 = NativeFunctions.ph_texthash(CommonTest.file4, out N2);
 			int nbmatches = 42;
 			/*NativeStructures.TxtMatch[]*/
 			IntPtr actual;

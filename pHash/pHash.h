@@ -1,5 +1,10 @@
 /*
 
+	Version 0.9.4, edited to export main functions ("__declspec(dllexport)")
+		Melvyn Laily - 2012
+	
+	---
+
     pHash, the open source perceptual hash library
     Copyright (C) 2008-2009 Aetilius, Inc.
     All rights reserved.

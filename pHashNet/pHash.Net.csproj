@@ -8,7 +8,7 @@
     <ProjectGuid>{663A39AE-CA7B-4DDC-BF22-39D5F6019984}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>pHashNet</RootNamespace>
+    <RootNamespace>pHash</RootNamespace>
     <AssemblyName>pHashNet</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -55,10 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HashAlgorithm.cs" />
     <Compile Include="NativeFunctions.cs" />
     <Compile Include="NativeStructures.cs" />
-    <Compile Include="pHash.cs" />
+    <Compile Include="pHashNet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HashWrappers.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

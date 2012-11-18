@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugConsoleApplication", "DebugConsoleApplication\DebugConsoleApplication.csproj", "{9A0AC6F6-49F8-4A67-8FC5-08190C3EC7F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pHashNet", "pHashNet\pHashNet.csproj", "{663A39AE-CA7B-4DDC-BF22-39D5F6019984}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pHash.Net", "pHashNet\pHash.Net.csproj", "{663A39AE-CA7B-4DDC-BF22-39D5F6019984}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1A4E5682-AA5E-41E6-9C0D-CC85D3A3D547} = {1A4E5682-AA5E-41E6-9C0D-CC85D3A3D547}
 	EndProjectSection
@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pHashNetTests", "pHashNetTests\pHashNetTests.csproj", "{085A36E3-ABFF-425A-9929-0231E2723A31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pHash.NetTests", "pHashNetTests\pHash.NetTests.csproj", "{085A36E3-ABFF-425A-9929-0231E2723A31}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pHash", "pHash\pHash.vcxproj", "{1A4E5682-AA5E-41E6-9C0D-CC85D3A3D547}"
 EndProject

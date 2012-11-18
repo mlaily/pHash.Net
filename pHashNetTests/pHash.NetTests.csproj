@@ -65,14 +65,15 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonTest.cs" />
     <Compile Include="NativeFunctionsTest.cs" />
-    <Compile Include="pHashTest.cs" />
+    <Compile Include="pHashNetTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\pHashNet\pHashNet.csproj">
+    <ProjectReference Include="..\pHashNet\pHash.Net.csproj">
       <Project>{663A39AE-CA7B-4DDC-BF22-39D5F6019984}</Project>
-      <Name>pHashNet</Name>
+      <Name>pHash.Net</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
